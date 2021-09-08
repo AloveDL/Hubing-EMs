@@ -1,6 +1,6 @@
 # Hubing-EMs
 #### create date： 2021/09/06 
-#### anthor：Sun DongDong
+#### author：Sun DongDong
 #### company：Anhui Hubing Information Technology
 
 ## 1.Introduction
