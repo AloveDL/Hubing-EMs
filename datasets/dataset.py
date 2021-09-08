@@ -19,27 +19,39 @@ def save_label():
     }
     with open("data/CASME2_label.txt", 'w') as w:
         for i in sheet.col_values(8)[1:]:
-            w.write(str(label_int_map[i])+'\n')
+            w.write(str(label_int_map[i]) + '\n')
 
 
 def cap_lbp_feature(root):
     lbp_feature = []
     for subdir in os.listdir(root):
-        new_path = root+"\\"+subdir
+        new_path = root + "\\" + subdir
         for video_file in os.listdir(new_path):
             print(video_file)
-            video_data = load_video(new_path+"\\"+video_file)
+            video_data = load_video(new_path + "\\" + video_file)
             lbp = lbp_top(video_data['video_tensor'])
             save_lbp_feature(lbp)
     return 1
 
 
 def save_lbp_feature(data):
-    np.savetxt('data/CASME2_lbp_xy_data.txt', data, fmt="%f")
+    with open("data/CASME2_lbp_xy_data.txt", 'a') as w:
+        for i in data:
+            w.write(str(i) + '\n')
 
 
 def load_lbp_feature(path):
-    return np.loadtxt(path, delimiter=',')
+    feature = []
+    with open(path, 'r') as r:
+        data = r.read().split('\n')
+        feature.append(data)
+    result = []
+    length = len(feature[0])
+    i = 177
+    while i <= length:
+        result.append(feature[0][i - 177:i])
+        i = i + 177
+    return result
 
 
 def load_label(path):
@@ -53,5 +65,5 @@ def load_label(path):
 if __name__ == '__main__':
     root = "C:\\Users\\27635\\Desktop\\公司实习\\data\\CASME2_Compressed video\\CASME2_compressed"
     lbp_feature = cap_lbp_feature(root)
-
+    # print(load_lbp_feature("data/CASME2_lbp_xy_data.txt"))
     # save_label()
