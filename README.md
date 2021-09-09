@@ -1,10 +1,9 @@
 # Hubing-EMs
-#### create date： 2021/09/06 
-#### author：Sun DongDong
+#### create date： 2021/09/06
 #### company：Anhui Hubing Information Technology
 
 ## 1.Introduction
-
+> The main task of this project is to complete the discovery and recognition of micro-expressions(ME).
 ## 2.Requirement
 [![python-opencv](https://img.shields.io/badge/opencv-4.1.2.30-blue.svg?style=flat-square)](https://pypi.org/project/opencv-python/) 
 [![numpy](https://img.shields.io/badge/numpy-1.18.0-red.svg?style=flat-square)](https://numpy.org/) 
