@@ -2,7 +2,7 @@
 import xlrd
 import numpy as np
 import os
-from utils.LBP import lbp_top, load_video
+from utils.LBP import lbp_top, load_video,lbp_sip
 
 
 def save_label():
@@ -29,7 +29,7 @@ def cap_lbp_feature(root):
         for video_file in os.listdir(new_path):
             print(video_file)
             video_data = load_video(new_path + "\\" + video_file)
-            lbp = lbp_top(video_data['video_tensor'])
+            lbp = lbp_sip(video_data['video_tensor'])
             save_lbp_feature(lbp)
     return 1
 

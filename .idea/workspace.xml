@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db73d6e9-1975-4729-bba1-6df42232fe66" name="Default Changelist" comment="update readme.md file">
-      <change afterPath="$PROJECT_DIR$/utils/augmentation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/CASME2_lbp_xy_data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/CASME2_lbp_xy_data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/LBP.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/LBP.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,9 +209,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.dataset" />
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.train" />
         <item itemvalue="Python.LBP" />
-        <item itemvalue="Python.test" />
         <item itemvalue="Python.EMV" />
       </list>
     </recent_temporary>
@@ -274,11 +275,11 @@
     <option name="LAST_COMMIT_MESSAGE" value="update readme.md file" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Hubing_EMs$test.coverage" NAME="test Coverage Results" MODIFIED="1631061882972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/Hubing_EMs$train.coverage" NAME="train Coverage Results" MODIFIED="1631088466574" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Hubing_EMs$test.coverage" NAME="test Coverage Results" MODIFIED="1631169640297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/Hubing_EMs$EMV.coverage" NAME="EMV Coverage Results" MODIFIED="1630977076255" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Hubing_EMs$LBP.coverage" NAME="LBP Coverage Results" MODIFIED="1631069209800" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Hubing_EMs$demo.coverage" NAME="demo Coverage Results" MODIFIED="1630916131896" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/demo" />
-    <SUITE FILE_PATH="coverage/Hubing_EMs$dataset.coverage" NAME="dataset Coverage Results" MODIFIED="1631146781653" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Hubing_EMs$dataset.coverage" NAME="dataset Coverage Results" MODIFIED="1631172152381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

@@ -333,5 +333,53 @@ def uniform_bit8_lbp(histogram):
     return new_histogram
 
 
+def lbp_sip(data, x_radius=1, y_radius=1, t_radius=4, neighbour_points=None, block_num=None):
+    if neighbour_points is None:
+        neighbour_points = [4, 2]
+    if block_num is None:
+        block_num = [5, 5]
+    xy_neighbour_points = neighbour_points[0]
+    xt_neighbour_points = neighbour_points[1]
+    length, width, height = data.shape
+    block_width = int(data.shape[1]/block_num[0])
+    block_height = int(data.shape[2]/block_num[1])
+
+    n_dim = 2 ** xy_neighbour_points + 2 ** xt_neighbour_points
+
+    histogram = np.zeros((block_num[0] * block_num[1], n_dim), float)
+    index_block = 0
+    for i in tqdm(range(block_num[0])):
+        for j in range(block_num[1]):
+            x_start_point_val = i * block_width
+            y_start_point_val = j * block_height
+            for tc in range(t_radius, length - t_radius):
+                for xc in range(x_start_point_val+x_radius, x_start_point_val + block_width - x_radius):
+                    for yc in range(y_start_point_val + y_radius, y_start_point_val + block_height - y_radius):
+                        center_val = data[tc, xc, yc]
+                        basic_lbp = 0
+                        FeaBin = 0
+                        for p in range(xy_neighbour_points):
+                            X = int(xc + x_radius * math.cos((2 * math.pi * p) / xy_neighbour_points)+0.5)
+                            Y = int(yc - y_radius * math.sin((2 * math.pi * p) / xy_neighbour_points)+0.5)
+                            CurrentVal = data[tc, X, Y]
+                            if CurrentVal >= center_val:
+                                basic_lbp += 2 ** FeaBin
+                            FeaBin += 1
+                        histogram[index_block, basic_lbp] += 1
+                        basic_lbp = 0
+                        FeaBin = 0
+
+                        for p in range(xt_neighbour_points):
+                            T = int(tc + t_radius * math.cos((2 * math.pi * p) / xt_neighbour_points) + 0.5)
+                            X = int(xc + x_radius * math.sin((2 * math.pi * p) / xt_neighbour_points) + 0.5)
+                            CurrentVal = data[T, X, yc]
+                            if CurrentVal >= center_val:
+                                basic_lbp += 2 ** FeaBin
+                            FeaBin += 1
+                        histogram[index_block, 2 ** xy_neighbour_points + basic_lbp] += 1
+            index_block += 1
+    histogram = histogram.flatten()
+    return standardization(histogram)
+
 if __name__ == '__main__':
     print(lbp_top(load_video('video/EP02_01f.avi')['video_tensor']))
