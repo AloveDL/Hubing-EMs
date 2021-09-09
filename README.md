@@ -1,6 +1,6 @@
 # Hubing-EMs
 #### create date： 2021/09/06
-#### company：Anhui Hubing Information Technology
+#### company：[Anhui Hubing Information Technology](http://www.hubing-ai.com/)
 
 ## 1.Introduction
 > The main task of this project is to complete the discovery and recognition of micro-expressions(ME).
@@ -11,9 +11,11 @@
 [![scikit-learn](https://img.shields.io/badge/sklearn-0.22.1-yellow.svg?style=flat-square)](https://scikit-learn.org/stable/) 
 [![tqdm](https://img.shields.io/badge/tqdm-4.12.1-pink.svg?style=flat-square)](https://github.com/tqdm/tqdm)
 ## 3.Usage
-> pip install -r requeirments.txt /
+> pip install -r requirements.txt
 #### demo
 > python demo.py
+#### train
+> python train.py
 
 
 
