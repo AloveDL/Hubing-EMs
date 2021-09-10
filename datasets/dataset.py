@@ -2,6 +2,7 @@
 import xlrd
 import numpy as np
 import os
+import pandas as pd
 from utils.LBP import lbp_top, load_video,lbp_sip
 
 
@@ -35,7 +36,7 @@ def cap_lbp_feature(root):
 
 
 def save_lbp_feature(data):
-    with open("data/CASME2_lbp_xy_data.txt", 'a') as w:
+    with open("data/CASME2_lbp_sip_data.txt", 'a') as w:
         for i in data:
             w.write(str(i) + '\n')
 
@@ -44,22 +45,38 @@ def load_lbp_feature(path):
     feature = []
     with open(path, 'r') as r:
         data = r.read().split('\n')
+        # print(data)
+        data = [float(i) for i in data[:-1]]
         feature.append(data)
     result = []
     length = len(feature[0])
-    i = 177
+    i = 500
+
     while i <= length:
-        result.append(feature[0][i - 177:i])
-        i = i + 177
-    return result
+        result.append(feature[0][i - 500:i])
+        i = i + 500
+    return filter_data(result)
 
 
 def load_label(path):
     label = []
     with open(path, 'r') as r:
         row_data = r.readline()
-        label.append(row_data)
+        while row_data != '':
+            label.append(int(row_data[:-1]))
+            row_data = r.readline()
+
+
     return label
+
+def filter_data(data):
+    # data = np.array(data)
+    for i in range(len(data)):
+        for j in range(len(data[0])):
+            if str(data[i][j]) == 'nan':
+                data[i][j] = 0.0
+    return data
+    # print(df)
 
 
 if __name__ == '__main__':
@@ -67,3 +84,6 @@ if __name__ == '__main__':
     lbp_feature = cap_lbp_feature(root)
     # print(load_lbp_feature("data/CASME2_lbp_xy_data.txt"))
     # save_label()
+    # print(load_label("data/CASME2_label.txt"))
+
+    # filter_data(load_lbp_feature("data/CASME2_lbp_xy_data.txt"))

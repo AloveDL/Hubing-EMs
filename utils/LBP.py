@@ -379,7 +379,7 @@ def lbp_sip(data, x_radius=1, y_radius=1, t_radius=4, neighbour_points=None, blo
                         histogram[index_block, 2 ** xy_neighbour_points + basic_lbp] += 1
             index_block += 1
     histogram = histogram.flatten()
-    return standardization(histogram)
+    return histogram
 
 if __name__ == '__main__':
     print(lbp_top(load_video('video/EP02_01f.avi')['video_tensor']))
