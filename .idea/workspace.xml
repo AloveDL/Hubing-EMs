@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db73d6e9-1975-4729-bba1-6df42232fe66" name="Default Changelist" comment="update readme.md file">
-      <change afterPath="$PROJECT_DIR$/data/CASME2_lbp_sip_data.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/crop.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/haar/haarcascade_eye.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/haar/haarcascade_frontalface_default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/CASME2_lbp_xy_data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/CASME2_lbp_xy_data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CASME2_lbp_sip_data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/CASME2_lbp_sip_data.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datasets/dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/dataset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/svm_model.m" beforeDir="false" afterPath="$PROJECT_DIR$/model/svm_model.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/LBP.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/LBP.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/SVM.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/SVM.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eval.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

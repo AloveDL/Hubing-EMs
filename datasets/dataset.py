@@ -1,9 +1,7 @@
 # create date: 2021/09/06
 import xlrd
-import numpy as np
 import os
-import pandas as pd
-from utils.LBP import lbp_top, load_video,lbp_sip
+from utils.LBP import load_video,lbp_sip
 
 
 def save_label():
